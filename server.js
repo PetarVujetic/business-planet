@@ -19,6 +19,8 @@ const PORT = process.env.PORT || 5000
 const businessRoute = require('./routes/business')
 
 // Middlewares
+app.use(express.json())
+
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Set routes

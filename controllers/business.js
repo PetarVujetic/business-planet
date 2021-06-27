@@ -1,11 +1,11 @@
 const asyncHandler = require('../middlewares/asyncHandler')
 const Business = require('../models/Business')
 
+
 // @desc  Create a business
 //@route  POST /api/v1/business
 //@access Private
 exports.createBusiness = asyncHandler(async (req, res, next) => {
-
   const business = await Business.create(req.body)
 
   res.status(201).json({
