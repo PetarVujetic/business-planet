@@ -6,7 +6,7 @@ const geoCoder = require('../utils/geoCoder')
 const BusinessSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please add a business name'],
+    required: [true, 'Please add a name of your business'],
     unique: true,
     trim: true,
     maxlength: [50, 'Name can not be more than 50 characters']
